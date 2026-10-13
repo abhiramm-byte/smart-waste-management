@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="EcoTrack smart waste management demo">
+<title>EcoTrack | Smart Waste Management</title><link rel="stylesheet" href="style.css">
+</head><body>
+<header class="top"><a class="brand" href="#">♻ EcoTrack <small>SMART WASTE MANAGEMENT</small></a><span class="tag">COLLEGE PROJECT DEMO</span></header>
+<main class="wrap">
+<section class="hero"><p class="eyebrow">CLEANER STREETS START HERE</p><h1>Smart Waste <span>Management</span></h1><p>Report overflowing bins, monitor collection progress, and help keep your community clean.</p></section>
+<section class="stats">
+<div class="stat"><span>Total Reports</span><b id="totalCount">0</b></div><div class="stat"><span>Pending</span><b id="pendingCount">0</b></div><div class="stat"><span>In Progress</span><b id="progressCount">0</b></div><div class="stat"><span>Collected</span><b id="collectedCount">0</b></div>
+</section>
+<div class="columns">
+<section class="panel"><p class="eyebrow">CONTRIBUTE TO YOUR COMMUNITY</p><h2>Report a Waste Bin</h2>
+<form id="reportForm">
+<label for="location">Bin location *</label><input id="location" maxlength="100" placeholder="e.g. Main gate, Block A" required>
+<div class="formrow"><div><label for="wasteType">Waste type</label><select id="wasteType"><option>Mixed waste</option><option>Plastic</option><option>Paper</option><option>Food waste</option><option>E-waste</option></select></div>
+<div><label for="priority">Priority</label><select id="priority"><option>Medium</option><option>Low</option><option>High</option></select></div></div>
+<label for="details">Additional details</label><textarea id="details" maxlength="300" rows="3" placeholder="Describe the issue (optional)"></textarea>
+<button class="primary" type="submit">＋ Submit Report</button><p id="formMessage" role="status" class="message"></p>
+</form><p class="note">Demo mode: reports are saved in this browser only. This is not a live municipal reporting service.</p></section>
+<section class="panel"><div class="heading"><div><p class="eyebrow">LIVE DASHBOARD</p><h2>Waste Reports</h2></div><span id="reportTotalLabel" class="tag">0 reports</span></div>
+<div class="filters"><input id="searchInput" type="search" placeholder="Search location..." aria-label="Search location"><select id="statusFilter" aria-label="Filter status"><option>All</option><option>Pending</option><option>In Progress</option><option>Collected</option></select></div>
+<div id="reportsList"></div><div id="emptyState" class="empty"><span>🌱</span><h3>No reports yet</h3><p>Submit your first report using the form.</p></div>
+<div class="listfooter"><span id="shownLabel">Showing 0 reports</span><button id="clearAllBtn" class="textbtn" type="button">Clear all</button></div>
+</section></div><footer>EcoTrack · Built with HTML, CSS &amp; JavaScript · No database</footer></main><script src="script.js"></script></body></html>
